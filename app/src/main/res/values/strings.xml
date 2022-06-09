@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Firebase</string>
+    <string name="if_already_registered_click_here">If already registered?
+        <font color="#00BCD4"> <u>Click Here</u></font></string>
+    <string name="forgot_password_click_here">Forgot Password?
+        <font color="#00BCD4"> <u>Click Here</u></font></string>
 </resources>

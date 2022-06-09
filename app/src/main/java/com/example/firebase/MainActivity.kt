@@ -1,23 +1,27 @@
 package com.example.firebase
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
-    lateinit var  signingButton:Button
+    lateinit var auth : FirebaseAuth
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        signingButton=findViewById(R.id.signIn)
 
-        signingButton.setOnClickListener{
-signInWithGoogle()
+        auth = Firebase.auth
+
+        sign_out.setOnClickListener {
+            auth.signOut()
+            val intent = Intent(this,LoginActivity::class.java)
+            startActivity(intent)
+            finish()
         }
-    }
-
-    fun signInWithGoogle()
-    {
-
-    }
-}
+    }}
