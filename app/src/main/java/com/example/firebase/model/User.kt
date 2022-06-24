@@ -10,6 +10,12 @@ data class User(
   var firstName:String="",
   var lastName:String="",
   var emailID:String="",
+  var isProfileCompleted:Boolean=false,
+    var imagePath:String="",
+    var mobileNumber:String="",
+    var gender:String="",
+
+
 
 
 ):Parcelable
